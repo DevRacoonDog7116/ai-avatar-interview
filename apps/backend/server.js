@@ -13,7 +13,7 @@ const elevenLabsApiKey = process.env.ELEVEN_LABS_API_KEY;
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: "https://ai-avatar-interview.vercel.app/",
+  origin: "*",
   credentials: true
 }));
 const port = 3000;
