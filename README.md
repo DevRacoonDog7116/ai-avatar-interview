@@ -1,8 +1,7 @@
 ## Digital Human
 
 This project is a digital human that can talk and listen to you. It uses OpenAI's GPT-3 to generate responses, OpenAI's
-Whisper to transcript the audio, Eleven Labs to generate voice and Rhubarb Lip Sync to generate the lip sync. The tutorial
-to understand all the details of the repository can be found at [Monadical](https://monadical.com/posts/build-a-digital-human-with-large-language-models.html).
+Whisper to transcript the audio, Eleven Labs to generate voice and Rhubarb Lip Sync to generate the lip sync.
 
 The code performs four main tasks:
 
@@ -46,7 +45,7 @@ Before using this system, ensure you have the following prerequisites:
    sign up [here](https://elevenlabs.io/). 
 It's recommended to have the paid version. With the free version, the avatar doesn't work well due to an error caused by too many requests.
 3. **Rhubarb Lip-Sync:** Download the latest version of Rhubarb Lip-Sync compatible with your operating system from the
-   official [Rhubarb Lip-Sync repository](https://github.com/DanielSWolf/rhubarb-lip-sync/releases). Once downloaded,
+   official. Once downloaded,
    create a `/bin` directory in the backend and move all the contents of the unzipped `rhubarb-lip-sync.zip` into it.
    Sometimes, the operating system requests permissions, so you need to enable them.
 4. Install `ffmpeg` for  [Mac OS](https://formulae.brew.sh/formula/ffmpeg), [Linux](https://ffmpeg.org/download.html) or [Windows](https://ffmpeg.org/download.html).
