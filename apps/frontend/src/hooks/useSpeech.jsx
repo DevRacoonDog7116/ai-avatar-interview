@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const backendUrl = process.env.BACKEND_URL;
+//const backendUrl = process.env.BACKEND_URL;
 
 const SpeechContext = createContext();
 
@@ -28,7 +28,7 @@ export const SpeechProvider = ({ children }) => {
       const base64Audio = reader.result.split(",")[1];
       setLoading(true);
       try {
-        const data = await fetch(`${backendUrl}/sts`, {
+        const data = await fetch(`https://ai-avatar-interview.onrender.com/sts`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -85,7 +85,7 @@ export const SpeechProvider = ({ children }) => {
   const tts = async (message) => {
     setLoading(true);
     try {
-      const data = await fetch(`${backendUrl}/tts`, {
+      const data = await fetch(`https://ai-avatar-interview.onrender.com/tts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
