@@ -3,9 +3,9 @@ import { useEffect, useRef } from "react";
 import { Avatar } from "./Avatar";
 
 const Ground = () => (
-  <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+  <mesh position={[0, -3, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
     <planeGeometry args={[1000, 1000]} />
-    <meshStandardMaterial color="#228B22" />
+    <meshStandardMaterial color="white" />
   </mesh>
 );
 
