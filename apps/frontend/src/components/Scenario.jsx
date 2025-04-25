@@ -18,7 +18,7 @@ export const Scenario = () => {
       
       {/* Background sphere with HDRI */}
       <mesh>
-        <sphereGeometry args={[200, 60, 60]} />
+        <sphereGeometry args={[400, 60, 60]} />
         <meshBasicMaterial
           side={THREE.BackSide} // Ensures it's visible from inside the sphere
           map={new THREE.TextureLoader().load(
