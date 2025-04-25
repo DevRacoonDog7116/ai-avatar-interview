@@ -1,4 +1,4 @@
-import { CameraControls } from "@react-three/drei";
+20import { CameraControls } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { Avatar } from "./Avatar";
 import * as THREE from "three";
@@ -18,7 +18,7 @@ export const Scenario = () => {
       
       {/* Background sphere with HDRI */}
       <mesh>
-        <sphereGeometry args={[50, 60, 60]} />
+        <sphereGeometry args={[200, 60, 60]} />
         <meshBasicMaterial
           side={THREE.BackSide} // Ensures it's visible from inside the sphere
           map={new THREE.TextureLoader().load(
