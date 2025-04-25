@@ -10,7 +10,7 @@ export const Scenario = () => {
   return (
     <>
       <CameraControls ref={cameraControls} />
-      <Environment files="https://blenderartists.org/uploads/default/original/3X/6/c/6c3c595edc8b349b2028b28a2f570e89ea7ae7fd.jpg" background/>
+      <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/docklands_02_8k.hdr" background/>
       <Avatar />
     </>
   );
