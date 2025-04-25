@@ -1,4 +1,4 @@
-20import { CameraControls } from "@react-three/drei";
+import { CameraControls } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import { Avatar } from "./Avatar";
 import * as THREE from "three";
