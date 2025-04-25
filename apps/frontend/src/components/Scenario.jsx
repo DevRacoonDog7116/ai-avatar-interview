@@ -10,7 +10,7 @@ export const Scenario = () => {
   return (
     <>
       <CameraControls ref={cameraControls} />
-      <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/docklands_02_8k.hdr" background/>
+      <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/docklands_02_2k.hdr" background/>
       <Avatar />
     </>
   );
