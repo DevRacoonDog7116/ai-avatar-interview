@@ -9,7 +9,7 @@ const RETRY_DELAY = 0;
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const tmpDir = '/tmp';
+const tmpDir = 'tmp';
 
 const lipSync = async ({ messages }) => {
   await Promise.all(
