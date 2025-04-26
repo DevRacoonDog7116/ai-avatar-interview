@@ -14,6 +14,7 @@ const lipSync = async ({ messages }) => {
 
       for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
         try {
+          console.log("------------------------", fileName);
           await convertTextToSpeech({ text: message.text, fileName });
           await delay(RETRY_DELAY);
           break;
