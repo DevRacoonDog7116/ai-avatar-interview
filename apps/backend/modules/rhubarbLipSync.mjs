@@ -1,16 +1,21 @@
 import { execCommand } from "../utils/files.mjs";
+import path import 'path'
+
+const tmpDir = 'tmp'
 
 const getPhonemes = async ({ message }) => {
   try {
     const time = new Date().getTime();
     console.log(`Starting conversion for message ${message}`);
+    const rootDir = process.cwd();
+    const suffix = path.join(rootDir, `message_${message}.mp3`)
     await execCommand(
-      { command: `ffmpeg -y -i tmp/message_${message}.mp3 tmp/message_${message}.wav` }
+      { command: `ffmpeg -y -i ${suffix}.mp3 ${suffix}.wav` }
       // -y to overwrite the file
     );
     console.log(`Conversion done in ${new Date().getTime() - time}ms`);
     await execCommand({
-      command: `./bin/rhubarb -f json -o tmp/message_${message}.json tmp/message_${message}.wav -r phonetic`,
+      command: `./bin/rhubarb -f json -o ${suffix}.json ${suffix}.wav -r phonetic`,
     });
     // -r phonetic is faster but less accurate
     console.log(`Lip sync done in ${new Date().getTime() - time}ms`);
