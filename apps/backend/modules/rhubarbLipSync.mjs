@@ -1,5 +1,5 @@
 import { execCommand } from "../utils/files.mjs";
-import path import 'path'
+import path from 'path'
 
 const tmpDir = 'tmp'
 
