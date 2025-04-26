@@ -8,7 +8,7 @@ const getPhonemes = async ({ message }) => {
     const time = new Date().getTime();
     console.log(`Starting conversion for message ${message}`);
     const rootDir = process.cwd();
-    const suffix = path.join(rootDir, `message_${message}.mp3`)
+    const suffix = path.join(rootDir, tmpDir, `message_${message}.mp3`)
     await execCommand(
       { command: `ffmpeg -y -i ${suffix}.mp3 ${suffix}.wav` }
       // -y to overwrite the file
