@@ -1,14 +1,14 @@
 import { execCommand } from "../utils/files.mjs";
 import path from 'path'
 
-const tmpDir = 'tmp'
+const tmpDir = '/tmp'
 
 const getPhonemes = async ({ message }) => {
   try {
     const time = new Date().getTime();
     console.log(`Starting conversion for message ${message}`);
     const rootDir = process.cwd();
-    const suffix = path.join(rootDir, tmpDir, `message_${message}`)
+    const suffix = path.join(tmpDir, `message_${message}`)
     await execCommand(
       { command: `ffmpeg -y -i ${suffix}.mp3 ${suffix}.wav` }
       // -y to overwrite the file
