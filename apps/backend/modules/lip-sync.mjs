@@ -15,7 +15,7 @@ const lipSync = async ({ messages }) => {
   await Promise.all(
     messages.map(async (message, index) => {
       //const fileName = `tmp/message_${index}.mp3`;
-      const fileName = path.join(path.cwd(), tmpDir, `message_${index}.mp3`);
+      const fileName = path.join(process.cwd(), tmpDir, `message_${index}.mp3`);
       for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
         try {
           
