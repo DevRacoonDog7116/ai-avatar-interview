@@ -2,17 +2,20 @@ import { convertTextToSpeech } from "./elevenLabs.mjs";
 import { getPhonemes } from "./rhubarbLipSync.mjs";
 import { readJsonTranscript, audioFileToBase64 } from "../utils/files.mjs";
 import fs from 'fs'
+import path from 'path'
 
 const MAX_RETRIES = 10;
 const RETRY_DELAY = 0;
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+const tmpDir = '/tmp';
+
 const lipSync = async ({ messages }) => {
   await Promise.all(
     messages.map(async (message, index) => {
-      const fileName = `tmp/message_${index}.mp3`;
-
+      //const fileName = `tmp/message_${index}.mp3`;
+      const fileName = path.join(path.cwd(), tmpDir, `message_${index}.mp3`);
       for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
         try {
           
