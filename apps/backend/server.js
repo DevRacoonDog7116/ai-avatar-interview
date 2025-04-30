@@ -2,19 +2,19 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import { openAIChain, parser } from "./modules/openAI.mjs";
-import { lipSync } from "./modules/lip-sync.mjs";
-import { sendDefaultMessages, defaultResponse } from "./modules/defaultMessages.mjs";
-import { convertAudioToText } from "./modules/whisper.mjs";
+import { lipSync } from "./modules/lip-sync.mjs"; 
+import { sendDefaultMessages, defaultResponse } from "./modules/defaultMessages.mjs"; 
+import { convertAudioToText } from "./modules/whisper.mjs"; 
 
 dotenv.config();
 
-const elevenLabsApiKey = process.env.ELEVEN_LABS_API_KEY;
+const elevenLabsApiKey = process.env.ELEVEN_LABS_API_KEY; 
 
-const app = express();
-app.use(express.json());
-app.use(cors({
-  origin: "*",
-  credentials: true
+const app = express(); 
+app.use(express.json()); 
+app.use(cors({ 
+  origin: "*", 
+  credentials: true 
 }));
 const port = 3000;
 
