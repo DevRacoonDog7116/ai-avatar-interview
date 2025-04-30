@@ -7,19 +7,19 @@ const SpeechContext = createContext();
 export const SpeechProvider = ({ children }) => {
   const [recording, setRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
-  const [messages, setMessages] = useState([]);
-  const [message, setMessage] = useState();
-  const [loading, setLoading] = useState(false);
+  const [messages, setMessages] = useState([]); 
+  const [message, setMessage] = useState(); 
+  const [loading, setLoading] = useState(false); 
 
   let chunks = [];
 
   const initiateRecording = () => {
-    chunks = [];
+    chunks = []; 
   };
 
-  const onDataAvailable = (e) => {
-    chunks.push(e.data);
-  };
+  const onDataAvailable = (e) => { 
+    chunks.push(e.data); 
+  }; 
 
   const sendAudioData = async (audioBlob) => {
     const reader = new FileReader();
