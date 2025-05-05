@@ -17,9 +17,9 @@ export function Avatar(props) {
   const [setupMode, setSetupMode] = useState(false);
 
   useEffect(() => {
-    if (!message) {
-      setAnimation("Idle");
-      return;
+    if (!message) { 
+      setAnimation("Idle"); 
+      return; 
     }
     setAnimation(message.animation); 
     setFacialExpression(message.facialExpression); 
