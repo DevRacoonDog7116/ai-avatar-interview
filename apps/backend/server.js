@@ -8,13 +8,13 @@ import { convertAudioToText } from "./modules/whisper.mjs";
 
 dotenv.config();
 
-const elevenLabsApiKey = process.env.ELEVEN_LABS_API_KEY; 
+const elevenLabsApiKey = process.env.ELEVEN_LABS_API_KEY;
 
-const app = express(); 
-app.use(express.json()); 
-app.use(cors({ 
-  origin: "*", 
-  credentials: true 
+const app = express();
+app.use(express.json());
+app.use(cors({
+  origin: "*",
+  credentials: true
 }));
 const port = 3000;
 
